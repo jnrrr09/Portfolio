@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evans — Cybersecurity Analyst</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand"><span class="bracket">&lt;/&gt;</span> Evans Armah</div>
+  <span class="hamburger">☰</span>
+</nav>
+
+<!-- TOAST -->
+<div class="toast" id="toast">✅ Message sent!</div>
+
+<!-- ═══════════════════════════════════════ HOME ══ -->
+<!-- ═══════════════════════════════════════ HOME ══ -->
+<div class="page active" id="home">
+  <div class="hero-layout">
+    <div class="hero-content">
+      <p class="welcome-tag">Welcome to my digital realm</p>
+      <h1 class="hero-name">Hi, I'm <span>Evans Nii Attoh Armah</span></h1>
+      <h2 class="hero-role"><span class="cursor">|</span></h2>
+      <p class="hero-bio">An aspiring cybersecurity analyst with a developer's mindset. I build secure systems, hunt vulnerabilities, and write the automation tools that power modern security workflows, blending offensive thinking with defensive strategy.</p>
+    </div>
+    <div class="hero-portrait">
+      <img src="evans.jpeg" alt="Evans" />
+      <!-- <div class="portrait-label">Evans</div> -->
+    </div>
+  </div>
+  <div class="hero-btns">
+    <a href="Curriculum Vitae.pdf" download class="btn btn-primary">⬇ Download CV</a>
+    <button class="btn btn-outline" onclick="showPage('contact')">✉ Contact Me</button>
+  </div>
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">10+</div><div class="stat-label">Projects Built</div></div>
+    <div class="stat-box"><div class="stat-num">30+</div><div class="stat-label">CTF Challenges</div></div>
+    <div class="stat-box"><div class="stat-num">5+</div><div class="stat-label">Certifications</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ PROJECTS ══ -->
+<div class="page" id="projects">
+  <h2 class="section-heading">My Projects</h2>
+  <p class="section-sub">Security tools and dev work I've built</p>
+
+  <div class="project-card">
+    <div class="project-top"><div class="project-icon">🛡️</div><span class="project-arrow">↗</span></div>
+    <div class="project-title">Overthewire</div>
+    <p class="project-desc">A collection of wargames to teach cybersecurity and linux skills through hands-on challenges. Perfect for beginners to advance in ethical hacking</p>
+    <div class="tags">
+      <span class="tag">Linux</span><span class="tag">security</span>
+      <span class="tag">wargames</span><span class="tag">CTF</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-top"><div class="project-icon">🎣</div><span class="project-arrow">↗</span></div>
+    <div class="project-title"> ● Upcoming project</div>
+    <!-- <p class="project-desc">Browser extension + backend service that analyzes URLs in real time against heuristics and threat intelligence feeds to flag suspected phishing pages.</p>
+    <div class="tags">
+      <span class="tag">JavaScript</span><span class="tag">Flask</span>
+      <span class="tag">Threat Intel</span><span class="tag">OSINT</span>
+    </div> -->
+  </div>
+
+  <!-- <div class="project-card">
+    <div class="project-top"><div class="project-icon">🚩</div><span class="project-arrow">↗</span></div>
+    <div class="project-title">CTF Write-ups Repository</div>
+    <p class="project-desc">Documented solutions and methodology breakdowns for 30+ Capture The Flag challenges across HackTheBox and TryHackMe — covering forensics, web, and crypto.</p>
+    <div class="tags">
+      <span class="tag">HackTheBox</span><span class="tag">TryHackMe</span>
+      <span class="tag">Forensics</span><span class="tag">Web Exploitation</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-top"><div class="project-icon">📊</div><span class="project-arrow">↗</span></div>
+    <div class="project-title">Log Anomaly Detector</div>
+    <p class="project-desc">Lightweight SIEM-adjacent script that parses Apache/Nginx logs, detects brute-force patterns, and sends Slack alerts for suspicious activity in real time.</p>
+    <div class="tags">
+      <span class="tag">Python</span><span class="tag">Regex</span>
+      <span class="tag">SIEM</span><span class="tag">Alerting</span>
+    </div>
+  </div> -->
+</div> 
+
+<!-- ═══════════════════════════════════════ RESUME ══ -->
+<div class="page" id="resume">
+  <div class="resume-hero">
+    <h1>Education, Experience &amp; Technical Expertise</h1>
+  </div>
+
+  <div class="download-box">
+    <div>
+      <h3>📄 My Resume</h3>
+      <p>My_Resume_2026.pdf · Cybersecurity Analyst</p>
+    </div>
+    <a href="Curriculum Vitae.pdf" download class="btn btn-primary">⬇ Download</a>
+  </div>
+
+  <div class="resume-tabs">
+    <button class="r-tab active" onclick="showTab('education', this)">Education</button>
+    <button class="r-tab" onclick="showTab('experience', this)">Experience</button>
+    <button class="r-tab" onclick="showTab('certifications', this)">Certifications</button>
+  </div>
+
+  <!-- Education -->
+  <div class="r-panel active" id="education">
+    <div class="resume-card">
+      <div class="card-inner">
+        <div class="dot-indicator"></div>
+        <div style="flex:1">
+          <div class="resume-card-header">
+            <h3>BSc Information Technology</h3>
+            <span class="badge">In Progress</span>
+          </div>
+          <div class="org">[University of Cape Coast]</div>
+          <div class="period">2026 – Present</div>
+          <ul>
+            <li>Network Security &amp; Cryptography</li>
+            <li>Operating Systems &amp; Linux Administration</li>
+            <li>Database Systems &amp; Web Development</li>
+            <li>Ethical Hacking Fundamentals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="resume-card">
+      <div class="card-inner">
+        <div class="dot-indicator"></div>
+        <div style="flex:1">
+          <div class="resume-card-header">
+            <h3>Senior High School Certificate</h3>
+            <span class="badge">Completed</span>
+          </div>
+          <div class="org">[University Practice Senior High]</div>
+          <div class="period">2021 – 2024</div>
+          <ul><li>Studied elective Mathematics and I.C.T   </li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <div class="r-panel" id="experience">
+    <div class="resume-card">
+      <div class="card-inner">
+        <div class="dot-indicator"></div>
+        <div style="flex:1">
+          <div class="resume-card-header">
+            <h3>Cybersecurity Intern</h3>
+            <span class="badge">Internship</span>
+          </div>
+          <div class="org">[Company Name]</div>
+          <div class="period">Jun 2024 – Aug 2024</div>
+          <ul>
+            <li>Assisted in vulnerability assessments and penetration tests</li>
+            <li>Monitored SIEM dashboards and triaged security alerts</li>
+            <li>Wrote Python scripts to automate log analysis workflows</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="resume-card">
+      <div class="card-inner">
+        <div class="dot-indicator"></div>
+        <div style="flex:1">
+          <div class="resume-card-header">
+            <h3>Freelance Web Developer</h3>
+            <span class="badge">Freelance</span>
+          </div>
+          <div class="org">Self-employed</div>
+          <div class="period">2023 – Present</div>
+          <ul>
+            <li>Built and deployed secure web applications for small businesses</li>
+            <li>Implemented input validation, auth flows, and HTTPS configurations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certifications -->
+  <div class="r-panel" id="certifications">
+    <div class="resume-card">
+      <div class="card-inner"><div class="dot-indicator"></div>
+        <div style="flex:1">
+          <div class="resume-card-header"><h3>CompTIA Security+</h3><span class="badge">In Progress</span></div>
+          <div class="org">CompTIA</div><div class="period">Expected 2025</div>
+        </div>
+      </div>
+    </div>
+    <div class="resume-card">
+      <div class="card-inner"><div class="dot-indicator"></div>
+        <div style="flex:1">
+          <div class="resume-card-header"><h3>Cisco Networking Academy Certificate</h3><span class="badge">Completed</span></div>
+          <div class="org">Ethical hacker </div><div class="period">2024</div>
+        </div>
+      </div>
+    </div>
+    <div class="resume-card">
+      <div class="card-inner"><div class="dot-indicator"></div>
+        <div style="flex:1">
+          <div class="resume-card-header"><h3>TryHackMe </h3><span class="badge">Active</span></div>
+          <!-- <div class="org">TryHackMe</div> -->
+          <div class="period">2023 – Present</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ SKILLS ══ -->
+<div class="page" id="skills">
+  <h2 class="section-heading">My Skills</h2>
+  <p class="section-sub">Proficiency across security &amp; development</p>
+
+  <div class="skill-group">
+    <h3>🔐 Cybersecurity</h3>
+    <div class="skill-row"><div class="skill-meta"><span>Network Security</span><span>85%</span></div><div class="bar-bg"><div class="bar-fill" data-w="85"></div></div></div>
+    <div class="skill-row"><div class="skill-meta"><span>Penetration Testing</span><span>80%</span></div><div class="bar-bg"><div class="bar-fill" data-w="80"></div></div></div>
+    <div class="skill-row"><div class="skill-meta"><span>SIEM &amp; Log Analysis</span><span>75%</span></div><div class="bar-bg"><div class="bar-fill" data-w="75"></div></div></div>
+    <div class="skill-row"><div class="skill-meta"><span>Web App Security</span><span>78%</span></div><div class="bar-bg"><div class="bar-fill" data-w="78"></div></div></div>
+    <div class="skill-row"><div class="skill-meta"><span>Threat Intelligence</span><span>70%</span></div><div class="bar-bg"><div class="bar-fill" data-w="70"></div></div></div>
+  </div>
+
+  <div class="skill-group">
+    <h3>💻 Development</h3>
+    <div class="skill-row"><div class="skill-meta"><span>Python / Scripting</span><span>88%</span></div><div class="bar-bg"><div class="bar-fill" data-w="70"></div></div></div>
+    <div class="skill-row"><div class="skill-meta"><span>JavaScript / Web</span><span>80%</span></div><div class="bar-bg"><div class="bar-fill" data-w="75"></div></div></div>
+    <div class="skill-row"><div class="skill-meta"><span>Linux / Bash</span><span>85%</span></div><div class="bar-bg"><div class="bar-fill" data-w="80"></div></div></div>
+    <div class="skill-row"><div class="skill-meta"><span>HTML / CSS</span><span>92%</span></div><div class="bar-bg"><div class="bar-fill" data-w="92"></div></div></div>
+  </div>
+
+  <div class="skill-group">
+    <h3>🛠 Tools &amp; Platforms</h3>
+    <div class="skill-row"><div class="skill-meta"><span>Wireshark / Nmap</span><span>85%</span></div><div class="bar-bg"><div class="bar-fill" data-w="85"></div></div></div>
+    <div class="skill-row"><div class="skill-meta"><span>Metasploit</span><span>72%</span></div><div class="bar-bg"><div class="bar-fill" data-w="72"></div></div></div>
+    <div class="skill-row"><div class="skill-meta"><span>Burp Suite</span><span>75%</span></div><div class="bar-bg"><div class="bar-fill" data-w="75"></div></div></div>
+    <div class="skill-row"><div class="skill-meta"><span>Git / GitHub</span><span>88%</span></div><div class="bar-bg"><div class="bar-fill" data-w="88"></div></div></div>
+     <div class="skill-row"><div class="skill-meta"><span>VS code </span><span>92%</span></div><div class="bar-bg"><div class="bar-fill" data-w="92"></div></div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ CONTACT ══ -->
+<div class="page" id="contact">
+  <p class="contact-intro">Let's work together</p>
+  <p class="contact-sub">Actively looking for cybersecurity analyst roles and internships. Feel free to reach out.</p>
+
+  <div class="contact-links">
+    <a href="mailto:evansniiarmah13@gmail.com" class="c-link">
+      <div class="c-icon">✉</div>
+      <div><div class="c-label">Email</div><div class="c-val">evansniiarmah13@gmail.com</div></div>
+    </a>
+    <a href=" https://www.linkedin.com/in/evans-armah-6a987a34b" target="_blank" class="c-link">
+      <div class="c-icon" style="font-weight:800;font-size:14px;color:var(--blue-light);">in</div>
+      <div><div class="c-label">LinkedIn</div><div class="c-val">linkedin.com/in/evans</div></div>
+    </a>
+    <a href="https://github.com/evans" target="_blank" class="c-link">
+      <div class="c-icon">⌥</div>
+      <div><div class="c-label">GitHub</div><div class="c-val">https://github.com/jnrrr09</div></div>
+    </a>
+  </div>
+
+  <div class="form-group"><label>Phone Number <span>*</span></label><input class="form-control" type="tel" placeholder="+233 555 000 000" /></div>
+  <div class="form-group"><label>Email Address <span>*</span></label><input class="form-control" type="email" placeholder="employer@company.com" /></div>
+  <div class="form-group"><label>Subject <span>*</span></label><input class="form-control" type="text" placeholder="Job Opportunity / Project Inquiry" /></div>
+  <div class="form-group"><label>Message <span>*</span></label><textarea class="form-control" placeholder="Let's discuss your opportunity..."></textarea></div>
+  <button class="send-btn" onclick="sendMessage()">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    Send Message
+  </button>
+</div>
+
+<!-- ═══════════════════════════════════════ TAB BAR ══ -->
+<div class="tab-bar">
+  <button class="tab-item active" onclick="showPage('home')" id="tab-home">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    Home
+  </button>
+  <button class="tab-item" onclick="showPage('projects')" id="tab-projects">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+    Projects
+  </button>
+  <button class="tab-item" onclick="showPage('resume')" id="tab-resume">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+    Resume
+  </button>
+  <button class="tab-item" onclick="showPage('skills')" id="tab-skills">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+    Skills
+  </button>
+  <button class="tab-item" onclick="showPage('contact')" id="tab-contact">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    Contact
+  </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
