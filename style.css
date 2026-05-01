@@ -1,7 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ :root {
+  --bg: #0d1117;
+  --nav: #0d1b2e;
+  --card: #111827;
+  --card2: #162032;
+  --border: #1e3050;
+  --blue: #4d8ef0;
+  --blue-light: #6aa3ff;
+  --text: #e8edf5;
+  --muted: #8899b0;
+  --tab-active: #1a3a5c; 
+}
 
+/* ── LIGHT MODE ── */
+body.light {
+  --bg: #f0f4ff;
+  --nav: #ffffff;
+  --card: #ffffff;
+  --card2: #e8eef8;
+  --border: #ccd6f0;
+  --blue: #2563eb;
+  --blue-light: #1d4ed8;
+  --text: #0f172a;
+  --muted: #475569;
+  --tab-active: #dbeafe;
+}
 :root {
   --bg: #0d1117;
   --nav: #0d1b2e;
