@@ -53,7 +53,9 @@ const roles = [
   'A Cybersecurity Analyst',
   'A Penetration Tester',
   'An I.T Support Specialist',
-  'A Web developer'
+  'A Web developer',
+  'A Graphic designer'
+
 ];
 let ri = 0, ci = 0, deleting = false;
 const roleEl = document.querySelector('.hero-role');
