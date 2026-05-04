@@ -280,14 +280,34 @@
     </a>
   </div>
 
-  <div class="form-group"><label>Phone Number <span>*</span></label><input class="form-control" type="tel" placeholder="+233 555 000 000" /></div>
-  <div class="form-group"><label>Email Address <span>*</span></label><input class="form-control" type="email" placeholder="employer@company.com" /></div>
-  <div class="form-group"><label>Subject <span>*</span></label><input class="form-control" type="text" placeholder="Job Opportunity / Project Inquiry" /></div>
-  <div class="form-group"><label>Message <span>*</span></label><textarea class="form-control" placeholder="Let's discuss your opportunity..."></textarea></div>
-  <button class="send-btn" onclick="sendMessage()">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+ <form action="https://formspree.io/f/xgodkvdd" method="POST" onsubmit="handleSubmit(event)">
+
+  <div class="form-group">
+    <label>Phone Number <span>*</span></label>
+    <input class="form-control" type="tel" name="phone" placeholder="+233 555 000 000" required />
+  </div>
+  <div class="form-group">
+    <label>Email Address <span>*</span></label>
+    <input class="form-control" type="email" name="email" placeholder="employer@company.com" required />
+  </div>
+  <div class="form-group">
+    <label>Subject <span>*</span></label>
+    <input class="form-control" type="text" name="subject" placeholder="Job Opportunity / Project Inquiry" required />
+  </div>
+  <div class="form-group">
+    <label>Message <span>*</span></label>
+    <textarea class="form-control" name="message" placeholder="Let's discuss your opportunity..."></textarea>
+  </div>
+
+  <button type="submit" class="send-btn">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="22" y1="2" x2="11" y2="13"/>
+      <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+    </svg>
     Send Message
   </button>
+
+</form>
 </div>
 
 <!-- ═══════════════════════════════════════ TAB BAR ══ -->
