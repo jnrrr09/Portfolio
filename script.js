@@ -41,11 +41,49 @@ function animateBars() {
   barsAnimated = true;
 }
 
-// ── CONTACT FORM ──
-function sendMessage() {
-  const toast = document.getElementById('toast');
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 3000);
+// ── CONTACT FORM HANDLER ──
+async function handleSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  const btn = form.querySelector('.send-btn');
+
+  // Loading state
+  btn.innerHTML = '⏳ Sending...';
+  btn.disabled = true;
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      // Success
+      btn.innerHTML = '✅ Message Sent!';
+      btn.style.background = '#16a34a';
+      form.reset();
+
+      setTimeout(() => {
+        btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message`;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 4000);
+
+    } else {
+      throw new Error('Form submission failed');
+    }
+
+  } catch (error) {
+    btn.innerHTML = '❌ Failed. Try again.';
+    btn.style.background = '#dc2626';
+    btn.disabled = false;
+
+    setTimeout(() => {
+      btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message`;
+      btn.style.background = '';
+    }, 3000);
+  }
 }
 
 // ── TYPEWRITER EFFECT ──
