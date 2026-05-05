@@ -12,7 +12,7 @@ The portfolio is a simple, responsive website developed using core web technolog
 - Light and dark mode toggle  
 - Project and skills section  
 - Downloadable CV  
-- Clean and minimal user interface  
+- Clean and minimal user interface 
 
 ## Technologies Used
 
