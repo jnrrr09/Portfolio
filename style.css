@@ -317,3 +317,12 @@ textarea.form-control { resize: vertical; min-height: 130px; }
     height: 140px;
   }
 }
+/* ── FOOTER ── */
+.site-footer {
+  text-align: center;
+  padding: 28px 20px 90px;
+  border-top: 1px solid var(--border);
+  font-size: 13px; color: var(--muted);
+  line-height: 1.9;
+}
+.site-footer span { color: var(--blue); font-weight: 600; }
