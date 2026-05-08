@@ -71,14 +71,17 @@ function showTab(id, btn) {
 }
 
 // ── SKILL BARS ANIMATION ──
-let barsAnimated = false;
 function animateBars() {
-  if (barsAnimated) return;
   document.querySelectorAll('.bar-fill').forEach(bar => {
-    bar.style.width = bar.getAttribute('data-w') + '%';
+    bar.style.width = '0%';
   });
-  barsAnimated = true;
+  setTimeout(() => {
+    document.querySelectorAll('.bar-fill').forEach(bar => {
+      bar.style.width = bar.getAttribute('data-w') + '%';
+    });
+  }, 80);
 }
+
 
 // ── CONTACT FORM HANDLER ──
 async function handleSubmit(event) {
