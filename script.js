@@ -1,7 +1,8 @@
 // ── THEME TOGGLE ──
 function toggleTheme() {
   const isLight = document.body.classList.toggle('light');
-  document.getElementById('themeBtn').textContent = isLight ? '☀️' : '🌙';
+  document.querySelector('.theme-icon').textContent = isLight ? '☀️' : '🌙';
+  document.querySelector('.theme-label').textContent = isLight ? 'Light' : 'Dark';
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
 }
 
@@ -10,17 +11,55 @@ function toggleTheme() {
   const saved = localStorage.getItem('theme');
   if (saved === 'light') {
     document.body.classList.add('light');
-    document.getElementById('themeBtn').textContent = '☀️';
+    const icon = document.querySelector('.theme-icon');
+    const label = document.querySelector('.theme-label');
+    if (icon) icon.textContent = '☀️';
+    if (label) label.textContent = 'Light';
   }
 })();
 // ── PAGE NAVIGATION ──
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  document.getElementById('tab-' + id).classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.mob-link').forEach(t => t.classList.remove('active'));
+
+  const page = document.getElementById(id);
+  page.classList.add('active');
+
+  // Trigger re-animation for project cards
+  if (id === 'projects') {
+    page.querySelectorAll('.project-card').forEach(c => {
+      c.style.animation = 'none';
+      c.offsetHeight; // reflow
+      c.style.animation = '';
+    });
+  }
+
+  const tabEl = document.getElementById('tab-' + id);
+  if (tabEl) tabEl.classList.add('active');
+  const navEl = document.getElementById('nav-' + id);
+  if (navEl) navEl.classList.add('active');
+  const mobEl = document.getElementById('mob-' + id);
+  if (mobEl) mobEl.classList.add('active');
+
   if (id === 'skills') setTimeout(animateBars, 100);
   window.scrollTo(0, 0);
+}
+
+// ── MOBILE MENU ──
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('menuOverlay');
+  const btn = document.getElementById('hamburgerBtn');
+  const isOpen = menu.classList.toggle('open');
+  overlay.classList.toggle('open', isOpen);
+  btn.classList.toggle('open', isOpen);
+}
+function closeMobileMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('menuOverlay').classList.remove('open');
+  document.getElementById('hamburgerBtn').classList.remove('open');
 }
 
 // ── RESUME TABS ──

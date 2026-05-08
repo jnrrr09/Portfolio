@@ -11,11 +11,32 @@
 <!-- NAV -->
 <nav>
   <div class="nav-brand"><span class="bracket">&lt;/&gt;</span> Evans Armah</div>
-  <div style="display:flex;align-items:center;gap:16px;">
-    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Toggle theme">🌙</button>
-    <!-- <span class="hamburger">☰</span> -->
+  <div class="nav-links">
+    <button class="nav-link active" onclick="showPage('home')" id="nav-home">Home</button>
+    <button class="nav-link" onclick="showPage('projects')" id="nav-projects">Projects</button>
+    <button class="nav-link" onclick="showPage('resume')" id="nav-resume">Resume</button>
+    <button class="nav-link" onclick="showPage('skills')" id="nav-skills">Skills</button>
+    <button class="nav-link" onclick="showPage('contact')" id="nav-contact">Contact</button>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Toggle theme">
+      <span class="theme-icon">🌙</span>
+      <span class="theme-label">Dark</span>
+    </button>
+    <button class="hamburger-btn" onclick="toggleMobileMenu()" id="hamburgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<!-- MOBILE MENU DRAWER -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mob-link active" onclick="showPage('home');closeMobileMenu()" id="mob-home">🏠 Home</button>
+  <button class="mob-link" onclick="showPage('projects');closeMobileMenu()" id="mob-projects">💻 Projects</button>
+  <button class="mob-link" onclick="showPage('resume');closeMobileMenu()" id="mob-resume">📄 Resume</button>
+  <button class="mob-link" onclick="showPage('skills');closeMobileMenu()" id="mob-skills">⚡ Skills</button>
+  <button class="mob-link" onclick="showPage('contact');closeMobileMenu()" id="mob-contact">✉ Contact</button>
+</div>
+<div class="menu-overlay" id="menuOverlay" onclick="closeMobileMenu()"></div>
   
 
 <!-- TOAST -->
