@@ -487,3 +487,22 @@ textarea.form-control { resize: vertical; min-height: 130px; }
   line-height: 1.9;
 }
 .site-footer span { color: var(--blue); font-weight: 600; }
+.r-panel {
+  display: none;
+  animation: none;
+}
+.r-panel.active {
+  display: block;
+}
+.r-panel.active .resume-card {
+  opacity: 0;
+  animation: cardDrop 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.r-panel.active .resume-card:nth-child(1) { animation-delay: 0.05s; }
+.r-panel.active .resume-card:nth-child(2) { animation-delay: 0.15s; }
+.r-panel.active .resume-card:nth-child(3) { animation-delay: 0.25s; }
+.r-panel.active .resume-card:nth-child(4) { animation-delay: 0.35s; }
+@keyframes cardDrop {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
