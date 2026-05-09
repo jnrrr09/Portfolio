@@ -506,3 +506,23 @@ textarea.form-control { resize: vertical; min-height: 130px; }
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+/* ── HERO MOBILE FIX ── */
+@media (max-width: 480px) {
+  .hero-layout {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .hero-content {
+    width: 100%;
+    min-width: 0;
+    text-align: left;
+  }
+  .hero-portrait {
+    width: 130px;
+    margin-top: 0;
+  }
+  .hero-portrait img {
+    width: 130px;
+    height: 160px;
+  }
+}
