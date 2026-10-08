@@ -102,7 +102,7 @@ async function handleSubmit(event) {
 
     if (response.ok) {
       // Success
-      btn.innerHTML = '✅ Message Sent!';
+      btn.innerHTML = ' Message Sent!';
       btn.style.background = '#16a34a';
       form.reset();
 
